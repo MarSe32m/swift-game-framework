@@ -1,3 +1,4 @@
-# swift-game-framework
+# Swift Game Framework
 
-A description of this package.
+This is a graphics/game framework for lightweight games and such. 
+You are free to use this as you wish but keep in mind that this will certainly have bugs since I do this as a hobby :)
