@@ -34,6 +34,7 @@ public protocol Window: AnyObject {
     func focus()
     func maximize()
     func restore()
+    func set(width: Int, height: Int)
 }
 
 internal protocol WindowInternals {
@@ -239,6 +240,11 @@ internal final class WindowsWindow: Window, WindowInternals {
 
     public final func restore() {
         glfwRestoreWindow(windowHandle)
+    }
+
+    public final func set(width: Int, height: Int) {
+        self.width = width
+        self.height = height
     }
 
     internal final func shutdown() {
