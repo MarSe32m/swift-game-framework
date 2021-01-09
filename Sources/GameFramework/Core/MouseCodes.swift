@@ -1,3 +1,10 @@
+/**
+ * Copyright © 2021 Sebastian Toivonen
+ * All Rights Reserved.
+ *
+ * Licensed under Apache License v2.0
+ */
+
 public enum MouseCode: UInt16 {
     // From glfw3.h
 	case buttonLeft             = 0

@@ -1,4 +1,10 @@
-import GLFWSwift
+/**
+ * Copyright © 2021 Sebastian Toivonen
+ * All Rights Reserved.
+ *
+ * Licensed under Apache License v2.0
+ */
+
 import Foundation
 import Dispatch
 import GLMSwift
@@ -41,7 +47,6 @@ public final class Application {
 
     public init(name: String = "Sebbu Game Framework", width: Int = 1280, height: Int = 720, fullScreen: Bool = false) {
         precondition(Application.shared == nil, "Application already exists!")
-        print("Ola senor!")
         self.name = name
         self.windowProperties = WindowProperties(title: name, width: width, height: height, isFullScreen: fullScreen)
         #if os(Windows)
@@ -67,7 +72,6 @@ public final class Application {
 
     public final func run() {
         let repeatingTimer = RepeatingTimer(timeInterval: .nanoseconds(1_000_000), queue: .main)
-        //var currentTime = glfwGetTime()
         var currentTime = DispatchTime.now().uptimeNanoseconds
         var lastTime = currentTime
         var accumulatedTime = 0.0

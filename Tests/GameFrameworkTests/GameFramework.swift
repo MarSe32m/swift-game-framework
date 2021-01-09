@@ -1,11 +1,15 @@
-    import XCTest
-    @testable import swift_game_framework
+/**
+ * Copyright © 2021 Sebastian Toivonen
+ * All Rights Reserved.
+ *
+ * Licensed under Apache License v2.0
+ */
 
-    final class swift_game_frameworkTests: XCTestCase {
+import XCTest
+    @testable import GameFramework
+
+    final class GameFrameworkTests: XCTestCase {
         func testExample() {
-            // This is an example of a functional test case.
-            // Use XCTAssert and related functions to verify your tests produce the correct
-            // results.
-            XCTAssertEqual("Hello World!", "Hello, World!")
+            XCTAssertEqual("Hello, World!", "Hello, World!")
         }
     }

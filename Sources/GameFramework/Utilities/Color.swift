@@ -1,3 +1,10 @@
+/**
+ * Copyright © 2021 Sebastian Toivonen
+ * All Rights Reserved.
+ *
+ * Licensed under Apache License v2.0
+ */
+
 public struct Color {
     public var red: Float
     public var green: Float
