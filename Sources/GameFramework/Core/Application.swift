@@ -30,7 +30,7 @@ public final class Application {
     private var _FPS = 0
 
     /// The amount of ´fixed updates´ executed during the last second
-    /// This value should be the same as the fps specified eg. 60 my default
+    /// This value should be the same as the fps specified eg. 60 by default
     public private(set) var fixedUpdates = 0
 
     /// The amount of frames rendered (and updates executed) during the last second
@@ -134,7 +134,9 @@ public final class Application {
             self.scene?.willMove(self.window)
             self.scene?.window = nil
             self.scene = newScene
-            newScene._didMove(self.window)
+            newScene._defaultCamera.setOrthoProjection(width: Float(self.window.width), height: Float(self.window.height))
+            newScene.window = self.window
+            newScene.didMove(self.window)
         }
     }
 
@@ -155,7 +157,7 @@ public final class Application {
         
         //TODO: Touch events
         switch event {
-            case .none: preconditionFailure("We got a none event? This is kinda weird! Please contact the author of this engine...")
+            case .none: preconditionFailure("We got a none event? This is kinda weird! Please contact the author of this framework...")
             case .windowClose: close()
             case .windowResize(let newSize):
                 minimized = newSize.width == 0 && newSize.height == 0

@@ -69,7 +69,7 @@ public final class Texture2D: Equatable {
             fatalError("Format not supported")
         }
 
-        //MARK: OpenGL old
+        //MARK: Legacy OpenGL
         glGenTextures(1, &textureID)
         glBindTexture(GLenum(GL_TEXTURE_2D), textureID)
         glTexStorage2D(GLenum(GL_TEXTURE_2D), 1, GLenum(internalFormat), GLsizei(width), GLsizei(height))
@@ -82,7 +82,6 @@ public final class Texture2D: Equatable {
 
         //MARK: OpenGL modern
         /*
-
         glCreateTextures(GLenum(GL_TEXTURE_2D), 1, &textureID)
 		glTextureStorage2D(textureID, 1, GLenum(internalFormat), GLsizei(width), GLsizei(height))
 

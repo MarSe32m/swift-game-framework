@@ -25,12 +25,6 @@ open class Scene: Renderable {
         _defaultCamera.setOrthoProjection(width: Float(size.width), height: Float(size.height))
     }
 
-    internal func _didMove(_ view: Window) {
-        _defaultCamera.setOrthoProjection(width: Float(view.width), height: Float(view.height))
-        self.window = view
-        didMove(view)
-    }
-
     open func didMove(_ to: Window) {}
     open func willMove(_ from: Window) {}
     open func update(deltaTime: Double) {}

@@ -6,10 +6,10 @@
  */
 
 import XCTest
-    @testable import GameFramework
+@testable import GameFramework
 
-    final class GameFrameworkTests: XCTestCase {
-        func testExample() {
-            XCTAssertEqual("Hello, World!", "Hello, World!")
-        }
+final class GameFrameworkTests: XCTestCase {
+    func testExample() {
+        XCTAssertEqual("Hello, World!", "Hello, World!")
     }
+}

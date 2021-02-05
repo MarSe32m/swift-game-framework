@@ -56,11 +56,10 @@ class TestScene: Scene {
         renderer.drawQuad(position: squarePosition, zPosition: 0.9, zRotation: Float(zRotation), size: Size(width: 300, height: 300), texture: texture2)
     }
 }
-let startDate = Date()
-print("Starting game engine!")
+
 let application = Application()
 application.debug = true
 let scene = TestScene(size: Size(width: 1280, height: 720))
 application.present(scene)
-application.setFramesPerSecond(60)
+application.setFramesPerSecond(144)
 application.run()
