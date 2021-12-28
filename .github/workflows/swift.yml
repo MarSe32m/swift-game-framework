@@ -53,7 +53,7 @@ jobs:
       matrix:
         include:
          - tag: 5.5.2-RELEASE
-           branch: swift-5.5-release
+           branch: swift-5.5.2-release
          - tag: DEVELOPMENT-SNAPSHOT-2021-12-06-a
            branch: development
            
